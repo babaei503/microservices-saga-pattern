@@ -1,0 +1,24 @@
+spring:
+  application:
+    name: order-service
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+        format_sql: true 
+    show-sql: true    
+  datasource:
+    url: jdbc:mysql://localhost:3306/orderdb?useSSL=false&allowPublicKeyRetrieval=true
+    username: saba
+    password: a+123456
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  rabbitmq:
+    host: localhost
+    port: 5672    
+
+---
+
+server:
+  port: 8080
