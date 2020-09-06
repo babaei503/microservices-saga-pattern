@@ -1,0 +1,34 @@
+spring:
+  application:
+    name: payment-service
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+        format_sql: true 
+    show-sql: true    
+  datasource:
+    url: jdbc:mysql://localhost:3306/paymentdb?useSSL=false&allowPublicKeyRetrieval=true
+    username: saba
+    password: a+123456
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest    
+
+---
+
+server:
+  port: 8081
+  
+---
+
+queue:
+  order-create: ORDER_CREATED_EVENT
+  billed-order: BILLED_ORDER_EVENT
+  refund-payment: REFUND_PAYMENT_EVENT
+  order-canceled: ORDER_CANCELED_EVENT  

@@ -9,10 +9,10 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>ir.saeidbabaei</groupId>
-	<artifactId>order-service</artifactId>
+	<artifactId>payment-service</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>order-service</name>
-	<description>Order Service</description>
+	<name>payment-service</name>
+	<description>Payment Service</description>
 
 	<properties>
 		<java.version>14</java.version>
@@ -37,7 +37,7 @@
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
             <scope>runtime</scope>
-    	</dependency>	
+    	</dependency>
     	
 		<dependency>
 			<groupId>org.projectlombok</groupId>

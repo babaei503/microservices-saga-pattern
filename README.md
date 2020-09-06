@@ -10,6 +10,8 @@ before it can be used:
 
 rabbitmq-plugins enable rabbitmq_management
 
+http://localhost:15672/
+
 To import definitions using rabbitmqctl, use:
 
 rabbitmqctl import_definitions /path/rabbitmq-definitions.json
@@ -36,3 +38,10 @@ http://localhost:8080/api/orders
 Get all orders - Get method:
 
 http://localhost:8080/api/orders
+
+# Payment Service
+
+This service responsible for handling information regarding payments.
+
+Run this project as a Spring Boot app (e.g. import into IDE and run
+main method, or use "mvn spring-boot:run").
