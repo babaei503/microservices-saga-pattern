@@ -16,9 +16,20 @@ spring:
     driver-class-name: com.mysql.cj.jdbc.Driver
   rabbitmq:
     host: localhost
-    port: 5672    
+    port: 5672
+    username: guest
+    password: guest    
 
 ---
 
 server:
   port: 8080
+  servlet:
+    context-path: /api  
+  
+---
+
+queue:
+  order-create: ORDER_CREATED_EVENT
+  order-done: ORDER_DONE_EVENT
+  order-canceled: ORDER_CANCELED_EVENT  
