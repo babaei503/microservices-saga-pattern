@@ -1,0 +1,35 @@
+spring:
+  application:
+    name: stock-service
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+        format_sql: true 
+    show-sql: true    
+  datasource:
+    url: jdbc:mysql://localhost:3306/orderdb?useSSL=false&allowPublicKeyRetrieval=true
+    username: saba
+    password: a+123456
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    initialization-mode: always    
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest    
+
+---
+
+server:
+  port: 8082
+  
+---
+
+queue:
+  billed-order: BILLED_ORDER_EVENT
+  order-done: ORDER_DONE_EVENT
+topic:
+  order-canceled: ORDER_CANCELED_TOPIC

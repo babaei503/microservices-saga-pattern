@@ -39,9 +39,16 @@ Get all orders - Get method:
 
 http://localhost:8080/api/orders
 
-# Payment Service
+## Payment Service
 
 This service responsible for handling information regarding payments.
+
+Run this project as a Spring Boot app (e.g. import into IDE and run
+main method, or use "mvn spring-boot:run").
+
+## Stock Service
+
+This service responsible for handling information regarding stocks.
 
 Run this project as a Spring Boot app (e.g. import into IDE and run
 main method, or use "mvn spring-boot:run").

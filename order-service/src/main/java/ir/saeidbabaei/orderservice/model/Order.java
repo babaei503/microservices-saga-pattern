@@ -21,6 +21,7 @@ public class Order {
 
     private BigDecimal value;
 
+    @Enumerated(EnumType.STRING)
     private OrderStatus status;
 
     public enum OrderStatus {
